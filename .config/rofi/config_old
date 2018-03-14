@@ -1,0 +1,17 @@
+
+! ------------------------------------------------------------------------------
+! ROFI Color theme
+! ------------------------------------------------------------------------------
+rofi.color-enabled: true
+rofi.color-window: #272822, #c5c8c6, #c5c8c6
+# rofi.color-normal: #272822, #ffffff, #272822, #8la2be, #272822
+rofi.color-active: #272822, #66d9ef, #272822, #66d9ef, #272822
+rofi.color-urgent: #272822, #f92672, #272822, #f92672, #272822
+rofi.opacity: 90
+rofi.separator-style: solid
+rofi.lines: 12
+rofi.line-margin: 10
+rofi.hide-scrollbar: true
+rofi.padding: 5
+rofi.location: 0
+rofi.theme: /usr/local/share//rofi/themes//sidebar.rasi

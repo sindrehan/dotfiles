@@ -1,0 +1,27 @@
+#!/bin/bash
+
+if [ -z $@ ] ; then
+    echo "NO (Qwerty)"
+    echo "US (Qwerty)"
+    echo "US (Dvorak)"
+    echo "US (Colemak)"
+else
+    choice=$@
+    case $choice in
+        "NO (Qwerty)")
+            setxkbmap no
+            ;;
+
+        "US (Qwerty)")
+            setxkbmap us
+            ;;
+
+        "US (Dvorak)")
+            setxkbmap us -variant dvorak
+            ;;
+
+        "US (Colemak)")
+            setxkbmap us -variant colemak
+            ;;
+    esac
+fi

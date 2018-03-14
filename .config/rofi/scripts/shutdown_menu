@@ -1,0 +1,32 @@
+#!/usr/bin/env bash
+
+if [ -z $@ ] ; then
+    echo Cancel
+    echo Suspend
+    echo Shutdown
+    echo Reboot
+    echo Logout
+else
+    choice=$@
+    case $choice in
+        Cancel)
+            exit
+            ;;
+
+        Logout)
+            i3-msg exit
+            ;;
+
+        Suspend)
+            systemctl suspend
+            ;;
+
+        Shutdown)
+            systemctl poweroff
+            ;;
+
+        Reboot)
+            systemctl reboot
+            ;;
+    esac
+fi
