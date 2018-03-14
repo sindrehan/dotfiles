@@ -1,0 +1,16 @@
+[user]
+	email = sindrehansen92@gmail.com
+	name = Sindre Hansen
+[push]
+	default = simple
+[core]
+	editor = emacsclient -t
+	excludesfile = ~/.config/.gitignore-global
+	autocrlf = false
+	safecrlf = false
+[status]
+	submodulesummary = 1
+[credential]
+	helper = cache
+[github]
+	user = sindrehan
