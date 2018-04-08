@@ -31,6 +31,9 @@ exec --no-startup-id /usr/lib/policykit-1-gnome/polkit-gnome-authentication-agen
 #(--no-startup-id)
 exec ~/.fehbg
 
+# Compositor
+exec compton -b
+
 # Notification
 exec killall dunst
 exec --no-startup-id dunst -config ~/.config/dunst
