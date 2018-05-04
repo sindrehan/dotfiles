@@ -35,6 +35,7 @@ ssh-add -l | grep "The agent has no identities" && ssh-add
 alias cdb="cd ~/Documents/Blueye/"
 alias cdn="cd ~/Documents/NTNU/"
 alias cdw="cd ~/Documents/website/"
+alias cdv="cd ~/Documents/Vortex/"
 alias o="xdg-open"
 alias thu="thunar . &"
 alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
