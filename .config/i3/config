@@ -38,23 +38,21 @@ exec compton -b
 exec killall dunst
 exec --no-startup-id dunst -config ~/.config/dunst
 
-# Zenburn colors
-# client.focused              #688060 #688060 #303030 #ffcfaf
-# client.focused_inactive     #3f3f3f #3F3F3F #7f9f7f #3f3f3f
-# client.unfocused            #3f3f3f #3F3F3F #DCDCCC #3f3f3f
-# client.urgent               #dca3a3 #dca3a3 #DCDCCC #3f3f3f
-
-set $toolbar-bg-clr     #2f343f
+set $toolbar-bg-clr     #373737
 set $black              #000000
 set $white              #FFFFFF
 set $txt-on-light	#5c616c
+set $urgent             #EF5350
+set $focused-text       #FFFFFF
+set $unfocused-text     #A0A0A0
+set $focused-bg-clr     #878787
 
 # colors
 #			border		background		text 		  indicator
-client.focused		$black 		 $toolbar-bg-clr	#3dc1ff           $white
-client.unfocused	$black		 $toolbar-bg-clr	$white            $white
-client.focused_inactive	$black		 $toolbar-bg-clr	$white		  $white
-client.urgent 		$black		 $toolbar-bg-clr	#51c4d4		  $white
+client.focused		$black 		 $toolbar-bg-clr	$focused-text     $white
+client.unfocused	$black		 $toolbar-bg-clr	$unfocused-text   $white
+client.focused_inactive	$black		 $toolbar-bg-clr	$unfocused-text   $white
+client.urgent 		$black		 $toolbar-bg-clr	$urgent-text      $white
 
 
 #Start i3bar to display a workspace bar (plus the system information i3status 
@@ -64,7 +62,14 @@ bar {
         font pango: System San Francisco Display, FontAwesome 9
         status_command SCRIPT_DIR=~/.i3blocks-contrib/ i3blocks -c ~/.config/i3/i3blocks.conf
         colors {
-          background #1f222d
+          background    $toolbar-bg-clr
+          separator     $toolbar-bg-clr
+
+          # <colorclass>     <border>          <background>     <text>
+          focused_workspace  $toolbar-bg-clr   $toolbar-bg-clr  $white
+          active_workspace   $toolbar-bg-clr   $toolbar-bg-clr  $white
+          inactive_workspace $toolbar-bg-clr   $toolbar-bg-clr  $unfocused-text
+          urgent_workspace   $urgent           $urgent          $white
         }     
 } 
 
