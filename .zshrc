@@ -127,7 +127,12 @@ bindkey -e '\ew' x-copy-region-as-kill
 bindkey -e '^W' x-kill-region
 bindkey -e '^Y' x-yank
 
+function rnm(){
+    echo "Restarting nm-applet"
+    pkill nm-applet
+    nohup nm-applet &
 }
+
 # Extract files
 ex() {
     if [[ -f $1 ]]; then
