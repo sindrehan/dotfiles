@@ -36,7 +36,7 @@ alias cdb="cd ~/Documents/Blueye/"
 alias cdn="cd ~/Documents/NTNU/"
 alias cdw="cd ~/Documents/website/"
 alias o="xdg-open"
-alias nhere="nautilus . &"
+alias thu="thunar . &"
 alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 
 if [ -n "$INSIDE_EMACS" ]; then
